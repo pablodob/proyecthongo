@@ -1,31 +1,8 @@
-
-# coding: utf-8
-
-# # Project_hongo
-# 
-# ## Introducción
-# 
-# ### 1- Trabajar los datos
-# transformar los datos de ingreso, a variables de ingreso.
-# 
-# ### 2- Diseño de la red
-# Pensar en la estructura.
-# 
-# ### 3- Costo
-# Definir la función de costo para entrenar la red.
-# 
-# ### 4- Definir el entrenamiento
-# Manera a modificar los parametros (pesos)
-# 
-# ### 5- Prueba
-# entrenamiento y testeo.
-# 
-
 import pandas as pd
 import numpy as np
 from collections import Counter
 
-def load_data()
+def load_data():
     # Load data
     data = pd.read_csv("mushrooms.csv")
 
@@ -41,9 +18,7 @@ def load_data()
     for atr in data.columns:
 
         counter = Counter(data[atr])
-
         parcial_matrix = np.zeros((len(data),len(counter)))
-
 
         possible_values_parcial = list(counter.keys())
         all_possible_values += possible_values_parcial
